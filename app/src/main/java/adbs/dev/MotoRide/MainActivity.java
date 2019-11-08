@@ -123,23 +123,25 @@ public class MainActivity extends AppCompatActivity {
         final android.app.AlertDialog waitingDialog = new SpotsDialog(MainActivity.this);
         waitingDialog.show();
 
-        //Login
-        auth.signInWithEmailAndPassword(edtEmail.getText().toString(),edtPassword.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-            @Override
-            public void onSuccess(AuthResult authResult) {
-                waitingDialog.dismiss();
-                startActivity(new Intent(MainActivity.this,Welcome.class));
-                finish();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                waitingDialog.dismiss();
-                Snackbar.make(rootLayout,"Failed"+e.getMessage(),Snackbar.LENGTH_SHORT).show();
-                //Active Button
-                btnSignUp.setEnabled(true);
-            }
-        });
+        if ( edtEmail.getText() != null && !edtEmail.getText().toString().isEmpty() && edtPassword.getText() != null && !edtPassword.getText().toString().isEmpty() ) {
+            //Login
+            auth.signInWithEmailAndPassword(edtEmail.getText().toString(), edtPassword.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                @Override
+                public void onSuccess(AuthResult authResult) {
+                    waitingDialog.dismiss();
+                    startActivity(new Intent(MainActivity.this, Welcome.class));
+                    finish();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    waitingDialog.dismiss();
+                    Snackbar.make(rootLayout, "Failed" + e.getMessage(), Snackbar.LENGTH_SHORT).show();
+                    //Active Button
+                    btnSignUp.setEnabled(true);
+                }
+            });
+        }
 
         dialog.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
             @Override
