@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "407270410287",
+    "firebase_url": "https://motoride-39a7b.firebaseio.com",
+    "project_id": "motoride-39a7b",
+    "storage_bucket": "motoride-39a7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407270410287:android:10a6fcbf446b21703c9eda",
+        "android_client_info": {
+          "package_name": "adbs.dev.MotoRide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407270410287-nlm36d09mc4ba3pvtdqbvf3amde2dkqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "adbs.dev.MotoRide",
+            "certificate_hash": "ebddb31110aa36fba0cc1d32bcc2ac367f074601"
+          }
+        },
+        {
+          "client_id": "407270410287-ashk2j5qqir6ulmp2k8qinpun0mcsi7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKeNfYToiECuCmL8UboVz1z24O2KuAhAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407270410287-ashk2j5qqir6ulmp2k8qinpun0mcsi7p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
